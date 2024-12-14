@@ -72,14 +72,12 @@ public class Principal {
             Cliente cliente2 = new Cliente(20, true, false, false);
             Cliente cliente3 = new Cliente(19, false, true, true);
             Cliente cliente4 = new Cliente(30, false, true, true);
-            Cliente cliente5 = new Cliente(27, false, false, true);
             Cliente cliente6 = new Cliente(28, true, false, true); // No cumple condiciones
 
             System.out.println(determinarTipoDeCuenta(cliente1)); // Cuenta Confort
             System.out.println(determinarTipoDeCuenta(cliente2)); // Cuenta Vamos que tú puedes
             System.out.println(determinarTipoDeCuenta(cliente3)); // Cuenta Ahorra ahora que puedes
             System.out.println(determinarTipoDeCuenta(cliente4)); // Cuenta Independízate que va siendo hora
-            System.out.println(determinarTipoDeCuenta(cliente5)); // Cuenta Bienvenido a la Vida Adulta
 
             // Este caso lanzará la excepción
             System.out.println(determinarTipoDeCuenta(cliente6));
