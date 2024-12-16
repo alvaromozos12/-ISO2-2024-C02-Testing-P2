@@ -34,35 +34,35 @@ class Cliente {
 // Clase principal Banco
 public class Principal {
 
-    public static String determinarTipoDeCuenta(Cliente cliente) {
-        // Caso 1
-        if (cliente.getEdad() < 18 && cliente.isEstaEstudiando() && cliente.isViveConPadres()) {
-            return "Cuenta Confort";
-        }
-        // Caso 2
-        if (cliente.getEdad() < 25 && cliente.isEstaEstudiando() && !cliente.isViveConPadres()) {
-            return "Cuenta Vamos que tú puedes";
-        }
-        // Caso 3
-        if (cliente.getEdad() >= 18 && cliente.isEstaTrabajando() && cliente.isViveConPadres()) {
-            return "Cuenta Ahorra ahora que puedes";
-        }
-        // Caso 4
-        if (cliente.getEdad() >= 18 && cliente.isEstaTrabajando() && !cliente.isViveConPadres()) {
-            return "Cuenta Saltando del Nido";
-        }
-        // Caso 5
-        if (cliente.getEdad() > 25 && cliente.isEstaTrabajando() && cliente.isViveConPadres()) {
-            return "Cuenta Independízate que va siendo hora";
-        }
-        // Caso 6
-        if (cliente.getEdad() > 25 && cliente.isEstaTrabajando() && !cliente.isViveConPadres()) {
-            return "Cuenta Bienvenido a la Vida Adulta";
-        }
+	public static String determinarTipoDeCuenta(Cliente cliente) {
+	    // Caso 5: Independízate que va siendo hora
+	    if (cliente.getEdad() > 25 && cliente.isEstaTrabajando() && cliente.isViveConPadres()) {
+	        return "Cuenta Independízate que va siendo hora";
+	    }
+	    // Caso 6: Bienvenido a la Vida Adulta
+	    if (cliente.getEdad() > 25 && cliente.isEstaTrabajando() && !cliente.isViveConPadres()) {
+	        return "Cuenta Bienvenido a la Vida Adulta";
+	    }
+	    // Caso 3: Ahorra ahora que puedes
+	    if (cliente.getEdad() >= 18 && cliente.isEstaTrabajando() && cliente.isViveConPadres()) {
+	        return "Cuenta Ahorra ahora que puedes";
+	    }
+	    // Caso 4: Saltando del Nido
+	    if (cliente.getEdad() >= 18 && cliente.isEstaTrabajando() && !cliente.isViveConPadres()) {
+	        return "Cuenta Saltando del Nido";
+	    }
+	    // Caso 1: Cuenta Confort
+	    if (cliente.getEdad() < 18 && cliente.isEstaEstudiando() && cliente.isViveConPadres()) {
+	        return "Cuenta Confort";
+	    }
+	    // Caso 2: Vamos que tú puedes
+	    if (cliente.getEdad() < 25 && cliente.isEstaEstudiando() && !cliente.isViveConPadres()) {
+	        return "Cuenta Vamos que tú puedes";
+	    }
 
-        // Si ninguna condición se cumple
-        throw new IllegalArgumentException("No se puede determinar el tipo de cuenta");
-    }
+	    throw new IllegalArgumentException("No se puede determinar el tipo de cuenta");
+	}
+
 
     //AQUI HACER EL TESTING PERO SE HACE UNO A UNO
     // Método main para probar el código
